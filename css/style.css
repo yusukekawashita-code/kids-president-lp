@@ -435,6 +435,24 @@ body {
   color: var(--black);
   letter-spacing: 0.02em;
   line-height: 1.75;
+  padding-top: 130px;
+}
+@media only screen and (max-width: 1279px) {
+  body {
+    padding-top: 115px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding-top: 88px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  body {
+    padding-top: 75px;
+  }
 }
 
 img {
@@ -481,8 +499,12 @@ li {
  Header
 ========================= */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   width: 100%;
-  background: #fff;
+  background: var(--white);
 }
 
 .header__inner {
@@ -605,7 +627,6 @@ li {
 
 @media only screen and (max-width: 768px) {
   .header {
-    position: relative;
     z-index: 1000;
   }
 
