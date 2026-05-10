@@ -421,7 +421,9 @@ th {
   --black: #333333;
   --pink: #ed1e79;
   --yellow: #ffd900;
+  --fz26: clamp(0.875rem, 0.693rem + 0.78vw, 1.625rem);
   --fz28: clamp(1rem, 0.818rem + 0.78vw, 1.75rem);
+  --fz40: clamp(1.125rem, 0.791rem + 1.42vw, 2.5rem);
 }
 
 html {
@@ -587,7 +589,7 @@ li {
   border: 1px solid var(--pink);
   opacity: 0.8;
 }
-@media only screen and (max-width: 1499px) {
+@media only screen and (max-width: 1599px) {
   .header__inner {
     padding: 0 20px;
   }
@@ -824,5 +826,402 @@ li {
     width: 100%;
     aspect-ratio: 768 / 1214;
     object-fit: cover;
+  }
+}
+/* =========================
+ Produce Section
+========================= */
+
+.produce-section {
+  background: var(--white);
+  padding-block: 60px;
+}
+
+.produce-section__inner {
+  max-width: 1000px;
+}
+
+.produce-section__achievement {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.produce-section__achievement-image,
+.produce-section__concept-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.produce-section__concept {
+  max-width: 950px;
+  margin: 120px auto 120px;
+}
+@media only screen and (max-width: 1279px) {
+  .produce-section__concept {
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .produce-section {
+    padding-block: 30px;
+  }
+
+  .produce-section__inner {
+    padding: 0 10px;
+  }
+
+  .produce-section__achievement {
+    max-width: 100%;
+  }
+
+  .produce-section__concept {
+    max-width: 100%;
+    margin: 40px auto 40px;
+  }
+}
+/* =========================
+ Experience Step
+========================= */
+
+.experience-step {
+  margin-top: 30px;
+  margin-bottom: 120px;
+}
+
+.experience-step__inner {
+  padding: 0 24px;
+}
+
+.experience-step__item {
+  position: relative;
+}
+
+.experience-step__flag {
+  position: absolute;
+  top: -55px;
+  left: 5%;
+  z-index: 10;
+}
+
+.experience-step__flag img {
+  max-width: 150px;
+}
+
+.experience-step__box {
+  background: var(--yellow);
+  border-radius: 45px;
+  padding: 50px;
+}
+
+.experience-step__panel {
+  position: relative;
+  background: var(--white);
+  border-radius: 28px;
+  box-shadow: 14px 14px 0 #1a1a1a;
+  padding: 120px 20px 30px 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.experience-step__content {
+  width: 55%;
+}
+.experience-step__heading {
+  position: relative;
+}
+
+.experience-step__label {
+  position: absolute;
+  top: -50px;
+  left: -20px;
+  background: var(--pink);
+  color: var(--white);
+  font-size: var(--fz40);
+  font-weight: 700;
+  line-height: 1.375;
+  padding: 8px 20px;
+}
+
+.experience-step__title {
+  display: inline-block;
+  background: #ffec60;
+  color: #0071bc;
+  font-size: var(--fz40);
+  font-weight: 700;
+  line-height: 1.45;
+  margin-top: 10px;
+  padding: 8px 18px;
+}
+.experience-step__title span {
+  color: var(--pink);
+}
+
+.experience-step__text {
+  margin-top: 40px;
+}
+
+.experience-step__text p {
+  font-size: var(--fz26);
+  font-weight: 500;
+  line-height: 2;
+}
+
+.experience-step__text-pink,
+.experience-step__text span {
+  color: var(--pink);
+}
+
+.experience-step__visual {
+  width: 45%;
+}
+
+.experience-step__visual-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: -5rem;
+}
+
+.experience-step__line {
+  position: absolute;
+  top: -55px;
+  right: -15px;
+  width: 150px;
+  height: auto;
+}
+.experience-step__bubble {
+  position: absolute;
+  top: -70px;
+  left: 20%;
+  z-index: 15;
+}
+
+.experience-step__bubble img {
+  display: block;
+  width: 265px;
+  height: auto;
+}
+.experience-step--02 .experience-step__line {
+  right: 30px;
+}
+.experience-step--03 .experience-step__content {
+  width: 64%;
+}
+
+.experience-step--03 .experience-step__visual {
+  width: 36%;
+}
+.experience-step--03 .experience-step__visual-image {
+  margin-top: 0;
+}
+
+.experience-step--03 .experience-step__panel {
+  align-items: flex-end;
+}
+.experience-step--03 .experience-step__line {
+  position: absolute;
+  top: -55px;
+  right: -60px;
+  width: 150px;
+  height: auto;
+}
+
+@media only screen and (max-width: 1599px) {
+  .experience-step__line {
+    right: 55px;
+  }
+  .experience-step--02 .experience-step__line {
+    right: 100px;
+  }
+  .experience-step--03 .experience-step__content {
+    width: 60%;
+  }
+
+  .experience-step--03 .experience-step__visual {
+    width: 40%;
+  }
+  .experience-step--03 .experience-step__line {
+    right: 0;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .experience-step__box {
+    padding: 25px;
+  }
+  .experience-step__panel {
+    box-shadow: 10px 10px 0 #1a1a1a;
+    padding: 120px 20px 30px 30px;
+  }
+  .experience-step__flag {
+    top: -90px;
+  }
+  .experience-step__flag img {
+    max-width: 120px;
+  }
+  .experience-step__bubble img {
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 899px) {
+  .experience-step__visual-image {
+    margin-top: -3rem;
+  }
+  .experience-step__line {
+    top: -45px;
+    right: -5px;
+    width: 100px;
+  }
+  .experience-step__text .pc-only {
+    display: none;
+  }
+
+  .experience-step--02 .experience-step__line {
+    top: -35px;
+    right: 80px;
+  }
+  .experience-step__bubble {
+    top: -30px;
+    left: 30%;
+  }
+  .experience-step--03 .experience-step__line {
+    right: -80px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .experience-step {
+    margin-top: 50px;
+  }
+
+  .experience-step__flag {
+    top: -36px;
+    left: 4%;
+  }
+
+  .experience-step__flag img {
+    max-width: 150px;
+  }
+
+  .experience-step__panel {
+    padding: 120px 20px 30px 50px;
+    display: block;
+  }
+
+  .experience-step__content {
+    width: 100%;
+  }
+
+  .experience-step__label {
+    top: -30px;
+    left: 0;
+  }
+
+  .experience-step__title {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .experience-step__text {
+    margin-top: 20px;
+  }
+
+  .experience-step__visual {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .experience-step__visual-image {
+    max-width: 55%;
+    margin: 1rem auto 0;
+  }
+
+  .experience-step__line {
+    top: -30px;
+    right: 50px;
+  }
+  .experience-step--03 .experience-step__content,
+  .experience-step--03 .experience-step__visual {
+    width: 100%;
+  }
+
+  .experience-step--03 .experience-step__visual-image {
+    max-width: 70%;
+    margin: 2rem auto 0;
+  }
+  .experience-step--03 .experience-step__line {
+    width: 100px;
+    top: -40px;
+    right: 150px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .experience-step__inner {
+    padding: 0 16px;
+  }
+  .experience-step {
+    margin-top: 0;
+    margin-bottom: 90px;
+  }
+  .experience-step__box {
+    border-radius: 22px;
+    padding: 12px;
+  }
+
+  .experience-step__panel {
+    border-radius: 14px;
+    box-shadow: 5px 5px 0 #1a1a1a;
+    padding: 64px 14px 26px;
+  }
+
+  .experience-step__flag {
+    top: -50px;
+    left: 0;
+  }
+
+  .experience-step__flag img {
+    max-width: 80px;
+  }
+
+  .experience-step__label {
+    top: -34px;
+  }
+  .experience-step__title {
+    display: block;
+    margin-top: -4px;
+  }
+  .experience-step__text {
+    margin-top: 16px;
+  }
+
+  .experience-step__line {
+    width: 60px;
+    right: -1%;
+  }
+  .experience-step__visual-image {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+  .experience-step--02 .experience-step__visual-image {
+    max-width: 80%;
+  }
+  .experience-step__bubble {
+    top: -50px;
+    left: 25%;
+  }
+  .experience-step__bubble img {
+    width: 125px;
+  }
+  .experience-step--02 .experience-step__line {
+    right: 0;
+  }
+  .experience-step--03 .experience-step__line {
+    width: 60px;
+    top: -35px;
+    right: 0;
+  }
+  .experience-step--03 .experience-step__title {
+    padding: 1rem 0.5rem;
   }
 }
