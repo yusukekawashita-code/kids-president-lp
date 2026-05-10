@@ -583,9 +583,6 @@ li {
   .header__inner {
     height: 115px;
   }
-  .header__logo-image {
-    max-width: 180px;
-  }
   .header__nav-list {
     display: block;
   }
@@ -772,5 +769,39 @@ li {
   }
   .header__drawer-nav {
     padding: 20px 16px;
+  }
+}
+/* =========================
+ Main Visual
+========================= */
+
+.main-visual {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-visual__image {
+  display: block;
+  width: 100%;
+}
+
+.main-visual__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 769px) {
+  .main-visual__image img {
+    aspect-ratio: 1920 / 942;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-visual__image img {
+    width: 100%;
+    aspect-ratio: 768 / 1214;
+    object-fit: cover;
   }
 }
