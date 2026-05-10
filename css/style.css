@@ -422,6 +422,7 @@ th {
   --black: #333333;
   --pink: #ed1e79;
   --yellow: #ffd900;
+  --blue: #0071bc;
   --fz26: clamp(0.875rem, 0.693rem + 0.78vw, 1.625rem);
   --fz28: clamp(1rem, 0.818rem + 0.78vw, 1.75rem);
   --fz32: clamp(1.125rem, 0.913rem + 0.91vw, 2rem);
@@ -950,7 +951,7 @@ li {
 .experience-step__title {
   display: inline-block;
   background: #ffec60;
-  color: #0071bc;
+  color: var(--blue);
   font-size: var(--fz40);
   font-weight: 700;
   line-height: 1.45;
@@ -1367,5 +1368,194 @@ li {
 
   .future-story__rocket {
     max-width: 70px;
+  }
+}
+
+@media only screen and (max-width: 349px) {
+  .future-story__copy {
+    font-size: 17px;
+  }
+}
+
+/* =========================
+ Entrepreneur Message
+========================= */
+
+.entrepreneur-message {
+  padding-block: 180px;
+}
+
+.entrepreneur-message__inner {
+  position: relative;
+  max-width: 1000px;
+}
+
+.entrepreneur-message__title {
+  position: relative;
+  z-index: 2;
+  max-width: 950px;
+  margin-bottom: -120px;
+}
+
+.entrepreneur-message__title img {
+  display: block;
+  width: 98%;
+  height: auto;
+}
+
+.entrepreneur-message__board {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 130px 50px 50px;
+  background-image: linear-gradient(#d9edf8 1px, transparent 1px), linear-gradient(90deg, #d9edf8 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-color: var(--white);
+  border: 4px solid var(--black);
+  box-shadow: 20px 20px 0 var(--blue);
+}
+
+.entrepreneur-message__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.entrepreneur-message__content p {
+  font-size: var(--fz32);
+  font-weight: 700;
+  line-height: 2;
+}
+
+.entrepreneur-message__content span {
+  color: var(--pink);
+}
+
+.entrepreneur-message__highlight {
+  color: var(--blue) !important;
+  background: linear-gradient(transparent 62%, #ffec60 62%);
+}
+
+.entrepreneur-message__child {
+  position: absolute;
+  z-index: 3;
+  display: block;
+  height: auto;
+}
+
+.entrepreneur-message__child--left {
+  left: -95px;
+  bottom: -100px;
+  width: 250px;
+}
+
+.entrepreneur-message__child--right {
+  right: -105px;
+  top: 210px;
+  width: 260px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .entrepreneur-message {
+    padding-block: 140px;
+  }
+  .entrepreneur-message__title {
+    max-width: 850px;
+  }
+
+  .entrepreneur-message__board {
+    max-width: 850px;
+    padding: 140px 60px 80px;
+  }
+
+  .entrepreneur-message__child--left {
+    left: -45px;
+    width: 200px;
+  }
+
+  .entrepreneur-message__child--right {
+    right: -45px;
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .entrepreneur-message {
+    padding-block: 90px;
+  }
+  .entrepreneur-message__title {
+    max-width: 95%;
+  }
+
+  .entrepreneur-message__board {
+    max-width: 95%;
+    border-width: 3px;
+    box-shadow: 10px 10px 0 var(--blue);
+    background-size: 20px 20px;
+  }
+  .entrepreneur-message__child--left {
+    left: -20px;
+    bottom: -30px;
+    width: 150px;
+  }
+
+  .entrepreneur-message__child--right {
+    right: -20px;
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .entrepreneur-message__board {
+    padding: 85px 12px 90px;
+  }
+  .entrepreneur-message__title {
+    max-width: 100%;
+    margin-bottom: -70px;
+  }
+  .entrepreneur-message__content p {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+  .entrepreneur-message__title img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .entrepreneur-message__child--left {
+    width: 100px;
+  }
+
+  .entrepreneur-message__child--right {
+    width: 100px;
+    top: 250px;
+    right: -25px;
+  }
+}
+@media only screen and (max-width: 499px) {
+  .entrepreneur-message {
+    padding-block: 70px;
+  }
+}
+@media only screen and (max-width: 399px) {
+  .entrepreneur-message__board {
+    padding: 80px 8px 70px;
+  }
+  .entrepreneur-message__content p {
+    font-size: 16px;
+  }
+  .entrepreneur-message__child--left {
+    width: 90px;
+  }
+
+  .entrepreneur-message__child--right {
+    width: 90px;
+    right: -15px;
+  }
+}
+@media only screen and (max-width: 359px) {
+  .entrepreneur-message__content p {
+    font-size: 13px;
   }
 }
