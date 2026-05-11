@@ -2492,7 +2492,7 @@ li {
 }
 @media only screen and (max-width: 1024px) {
   .event-overview__title {
-    max-width: 770px;
+    max-width: 80%;
   }
   .event-overview__cards {
     gap: 16px;
@@ -2559,7 +2559,7 @@ li {
   }
 
   .event-overview__title {
-    max-width: 100%;
+    max-width: 80%;
     margin-bottom: 30px;
   }
 
@@ -2635,7 +2635,10 @@ li {
 
 .faq__list {
   max-width: 950px;
-  margin: 0 auto;
+  margin: 0 auto 60px;
+}
+.faq__list:last-of-type {
+  margin-bottom: 0;
 }
 
 /* 外側：影の基準 */
@@ -2650,9 +2653,9 @@ li {
   top: 8px;
   left: 8px;
   right: -12px;
-  bottom: -22px;
+  bottom: -16px;
   background: #d3ecf7;
-  clip-path: polygon(0 0, 100% 0, 100% 84%, 95% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 87%, 97% 100%, 0 100%);
   z-index: 0;
 }
 
@@ -2714,4 +2717,101 @@ li {
   font-size: var(--fz22);
   font-weight: 500;
   line-height: 1.7;
+}
+
+@media only screen and (max-width: 1024px) {
+  .faq {
+    padding-block: 120px;
+  }
+  .faq__title {
+    max-width: 45%;
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .faq {
+    padding-block: 90px;
+  }
+
+  .faq__title {
+    max-width: 40%;
+  }
+
+  .faq__list {
+    margin-bottom: 44px;
+  }
+
+  .faq__body {
+    padding: 22px 24px;
+  }
+
+  .faq__question,
+  .faq__answer {
+    grid-template-columns: 36px 1fr;
+    gap: 16px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .faq {
+    padding-block: 70px;
+  }
+
+  .faq__title {
+    max-width: 50%;
+    margin-bottom: 40px;
+  }
+
+  .faq__list {
+    margin-bottom: 36px;
+  }
+
+  .faq__item::before {
+    top: 6px;
+    left: 6px;
+    right: -8px;
+    bottom: -16px;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 92% 100%, 0 100%);
+  }
+
+  .faq__body {
+    padding: 20px 14px;
+    border-width: 3px;
+  }
+
+  .faq__body::after {
+    right: -3px;
+    bottom: -3px;
+    width: 22px;
+    height: 22px;
+    border-left-width: 3px;
+    border-top-width: 3px;
+  }
+
+  .faq__question,
+  .faq__answer {
+    grid-template-columns: 32px 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+
+  .faq__question {
+    padding-bottom: 14px;
+  }
+  .faq__question p {
+    margin-top: 4px;
+  }
+
+  .faq__answer {
+    margin-top: 14px;
+  }
+
+  .faq__icon {
+    width: 32px;
+  }
+
+  .faq__answer p br {
+    display: none;
+  }
 }
