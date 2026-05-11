@@ -2884,3 +2884,71 @@ li {
     margin-top: 32px;
   }
 }
+/* =========================
+予約ボタン
+========================= */
+
+#page-reserve a {
+  display: block;
+  width: 160px;
+  height: 160px;
+  background: url("../images/reserve-btn.png") no-repeat center;
+  background-size: contain;
+}
+
+/*リンクを右下に固定*/
+#page-reserve {
+  position: fixed;
+  right: 3%;
+  bottom: 20px;
+  z-index: 2;
+  /*はじめは非表示*/
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+/*上に上がる動き*/
+
+#page-reserve.UpMove {
+  animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*下に下がる動き*/
+
+#page-reserve.DownMove {
+  animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
+@media only screen and (max-width: 768px) {
+  #page-reserve {
+    right: 10px;
+    bottom: 10px;
+  }
+  #page-reserve a {
+    width: 75px;
+    height: 75px;
+  }
+}

@@ -27,3 +27,43 @@ drawerLinks.forEach((link) => {
     hamburger.setAttribute("aria-label", "メニューを開く");
   });
 });
+
+/* ==========================
+       予約ボタン
+========================== */
+(function () {
+  const topBtn = document.getElementById("page-reserve");
+  if (!topBtn) return;
+
+  function getShowPoint() {
+    // スマホ
+    if (window.innerWidth <= 768) {
+      return 150;
+    }
+
+    // PC
+    return 300;
+  }
+
+  function toggleTopBtn() {
+    const scroll = window.scrollY;
+    const showPoint = getShowPoint();
+
+    if (scroll > showPoint) {
+      if (!topBtn.classList.contains("UpMove")) {
+        topBtn.classList.remove("DownMove");
+        topBtn.classList.add("UpMove");
+      }
+    } else {
+      if (topBtn.classList.contains("UpMove")) {
+        topBtn.classList.remove("UpMove");
+        topBtn.classList.add("DownMove");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", toggleTopBtn);
+  window.addEventListener("resize", toggleTopBtn);
+
+  toggleTopBtn(); // 初期判定
+})();
