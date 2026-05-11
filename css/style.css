@@ -424,11 +424,13 @@ th {
   --yellow: #ffd900;
   --blue: #0071bc;
   --fz20: clamp(0.875rem, 0.784rem + 0.39vw, 1.25rem);
+  --fz22: clamp(0.938rem, 0.831rem + 0.45vw, 1.375rem);
   --fz26: clamp(0.875rem, 0.693rem + 0.78vw, 1.625rem);
   --fz28: clamp(1rem, 0.818rem + 0.78vw, 1.75rem);
   --fz32: clamp(1.125rem, 0.913rem + 0.91vw, 2rem);
   --fz36: clamp(1.188rem, 0.93rem + 1.1vw, 2.25rem);
   --fz40: clamp(1.125rem, 0.791rem + 1.42vw, 2.5rem);
+  --fz70: clamp(1.5rem, 0.893rem + 2.59vw, 4rem);
   --fz154: clamp(4.375rem, 3.101rem + 5.44vw, 9.625rem);
 }
 
@@ -2332,4 +2334,149 @@ li {
   .benefit__inner {
     padding: 0 10px;
   }
+}
+
+/* =========================
+ Event Overview
+========================= */
+
+.event-overview {
+  padding-block: 130px;
+  background: var(--white);
+}
+
+.event-overview__title {
+  max-width: 920px;
+  margin: 0 auto 60px;
+}
+
+.event-overview__points {
+  max-width: 680px;
+  margin: 0 auto 60px;
+}
+
+.event-overview__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* カード */
+
+.event-overview__card {
+  padding: 4px;
+  background: var(--white);
+  border: 6px solid var(--black);
+}
+
+.event-overview__card-inner {
+  position: relative;
+  height: 100%;
+  padding: 16px 16px 16px 24px;
+  background: #ffffd7;
+}
+
+.event-overview__area-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* エリア丸 */
+.event-overview__area {
+  width: 105px;
+  height: 105px;
+  background: var(--pink);
+  border-radius: 50%;
+  color: var(--white);
+  font-size: var(--fz20);
+  font-weight: 900;
+  line-height: 1.35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.event-overview__year {
+  font-size: var(--fz26);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--black);
+}
+
+.event-overview__date {
+  color: var(--black);
+  font-size: var(--fz26);
+  font-weight: 500;
+  line-height: 1;
+  margin-top: 10px;
+}
+
+.event-overview__date span {
+  font-size: var(--fz70);
+  font-weight: 700;
+}
+
+.event-overview__place {
+  color: var(--black);
+  font-size: var(--fz26);
+  font-weight: 500;
+  line-height: 1.35;
+  margin-top: 10px;
+  padding-left: 0.5em;
+}
+.event-overview__place span {
+  font-weight: 900;
+}
+.event-overview__place {
+  color: var(--black);
+  font-size: var(--fz26);
+  font-weight: 500;
+  line-height: 1.35;
+  margin-top: 10px;
+}
+
+/* 時間 */
+.event-overview__times {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.event-overview__times p {
+  position: relative;
+  border: 3px solid var(--blue);
+  background: var(--white);
+  color: var(--blue);
+  font-size: var(--fz22);
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.event-overview__times p::after {
+  content: "";
+  position: absolute;
+  right: 5%;
+  bottom: 10px;
+  width: 0;
+  height: 0;
+  border-left: 14px solid var(--pink);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.event-overview__times span {
+  display: block;
+  background: var(--blue);
+  color: var(--white);
+  font-size: var(--fz22);
+  font-weight: 500;
+  margin-bottom: 8px;
+  padding: 6px 0;
 }
