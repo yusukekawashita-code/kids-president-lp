@@ -2092,3 +2092,206 @@ li {
     margin-top: 16px;
   }
 }
+
+/* =========================
+ Parent Voice
+========================= */
+
+.parent-voice {
+  padding-block: 140px;
+  background: #fafafa;
+}
+
+.parent-voice__title {
+  max-width: 400px;
+  margin: 0 auto 120px;
+}
+
+.parent-voice__list {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.parent-voice__item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.parent-voice__item + .parent-voice__item {
+  margin-top: 45px;
+}
+
+.parent-voice__avatar {
+  flex-shrink: 0;
+  width: 180px;
+}
+
+.parent-voice__balloon {
+  position: relative;
+  flex: 1;
+  padding: 20px 30px;
+  background: var(--white);
+  border: 3px solid var(--black);
+  border-radius: 10px;
+}
+
+/* 吹き出し外側の三角 */
+.parent-voice__balloon::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-right: 24px solid var(--black);
+}
+
+/* 吹き出し内側の白三角 */
+.parent-voice__balloon::after {
+  content: "";
+  position: absolute;
+  left: -19px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-right: 20px solid var(--white);
+}
+
+/* 色付き影 */
+.parent-voice__item--pink .parent-voice__balloon {
+  box-shadow: 12px 12px 0 #fcddeb;
+}
+
+.parent-voice__item--blue .parent-voice__balloon {
+  box-shadow: 12px 12px 0 #c6e0f0;
+}
+
+.parent-voice__item--green .parent-voice__balloon {
+  box-shadow: 12px 12px 0 #def4f0;
+}
+
+.parent-voice__item--yellow .parent-voice__balloon {
+  box-shadow: 12px 12px 0 #fffad7;
+}
+
+.parent-voice__stars {
+  font-size: var(--fz32);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  color: #f5d01f;
+}
+
+.parent-voice__text {
+  font-size: var(--fz20);
+  font-weight: 500;
+  line-height: 1.9;
+  color: var(--black);
+  margin-top: 1rem;
+}
+
+.parent-voice__name {
+  font-size: var(--fz20);
+  font-weight: 700;
+  line-height: 1.9;
+  color: var(--blue);
+  margin-top: 14px;
+}
+@media only screen and (max-width: 899px) {
+  .parent-voice__avatar {
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .parent-voice {
+    padding: 70px 0 90px;
+  }
+
+  .parent-voice__title {
+    max-width: 330px;
+    margin-bottom: 90px;
+  }
+
+  .parent-voice__avatar {
+    width: 110px;
+  }
+
+  .parent-voice__balloon {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .parent-voice {
+    padding: 80px 0 80px;
+  }
+
+  .parent-voice__title {
+    max-width: 55%;
+    margin-bottom: 40px;
+  }
+  .parent-voice__item {
+    display: block;
+  }
+
+  .parent-voice__item + .parent-voice__item {
+    margin-top: 40px;
+  }
+
+  .parent-voice__avatar {
+    width: 80px;
+    margin: 0 auto 28px;
+  }
+
+  .parent-voice__balloon {
+    padding: 1rem;
+  }
+  .parent-voice__text {
+    margin-top: 10px;
+  }
+  .parent-voice__name {
+    margin-top: 8px;
+  }
+
+  .parent-voice__balloon::before {
+    left: 50%;
+    top: -24px;
+    transform: translateX(-50%);
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 24px solid var(--black);
+    border-top: none;
+  }
+
+  .parent-voice__balloon::after {
+    left: 50%;
+    top: -19px;
+    transform: translateX(-50%);
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 20px solid var(--white);
+    border-top: none;
+  }
+  .parent-voice__item--pink .parent-voice__balloon {
+    box-shadow: 8px 8px 0 #fcddeb;
+  }
+
+  .parent-voice__item--blue .parent-voice__balloon {
+    box-shadow: 8px 8px 0 #c6e0f0;
+  }
+
+  .parent-voice__item--green .parent-voice__balloon {
+    box-shadow: 8px 8px 0 #def4f0;
+  }
+
+  .parent-voice__item--yellow .parent-voice__balloon {
+    box-shadow: 8px 8px 0 #fffad7;
+  }
+}
