@@ -2948,7 +2948,7 @@ li {
   position: fixed;
   right: 3%;
   bottom: 20px;
-  z-index: 2;
+  z-index: 99;
   /*はじめは非表示*/
   opacity: 0;
   transform: translateY(100px);
