@@ -2687,7 +2687,7 @@ li {
   display: grid;
   grid-template-columns: 40px 1fr;
   gap: 25px;
-  align-items: center;
+  align-items: start;
 }
 
 .faq__question {
@@ -2813,5 +2813,74 @@ li {
 
   .faq__answer p br {
     display: none;
+  }
+}
+/* =========================
+ Footer
+========================= */
+
+.footer {
+  padding-block: 120px;
+  background: var(--white);
+  font-family: var(--font-rounded);
+  text-align: center;
+}
+
+.footer__logo {
+  max-width: 180px;
+  margin: 0 auto;
+}
+
+.footer__name {
+  color: var(--black);
+  font-size: var(--fz28);
+  font-weight: 900;
+  line-height: 1.6;
+  margin-top: 55px;
+}
+
+.footer__contact {
+  margin-top: 55px;
+}
+
+.footer__contact-title,
+.footer__tel {
+  color: var(--black);
+  font-size: var(--fz28);
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.footer__tel a {
+  color: inherit;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    padding-block: 80px;
+  }
+
+  .footer__logo {
+    max-width: 150px;
+  }
+
+  .footer__name,
+  .footer__contact {
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .footer {
+    padding-block: 60px;
+  }
+
+  .footer__logo {
+    max-width: 120px;
+  }
+
+  .footer__name,
+  .footer__contact {
+    margin-top: 32px;
   }
 }
