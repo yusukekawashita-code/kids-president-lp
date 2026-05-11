@@ -703,6 +703,7 @@ li {
 
   .header__hamburger.is-active .header__hamburger-line:nth-child(2) {
     opacity: 0;
+    visibility: hidden;
   }
 
   .header__hamburger.is-active .header__hamburger-line:nth-child(3) {
