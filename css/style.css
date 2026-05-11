@@ -2613,3 +2613,105 @@ li {
     border-bottom-width: 6px;
   }
 }
+/* =========================
+ FAQ
+========================= */
+
+.faq {
+  padding-block: 180px;
+  background: #eaf3f9;
+}
+
+.faq__title {
+  max-width: 450px;
+  margin: 0 auto 80px;
+}
+
+.faq__title img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.faq__list {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* 外側：影の基準 */
+.faq__item {
+  position: relative;
+}
+
+/* 一番下の青い影 */
+.faq__item::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: -12px;
+  bottom: -22px;
+  background: #d3ecf7;
+  clip-path: polygon(0 0, 100% 0, 100% 84%, 95% 100%, 0 100%);
+  z-index: 0;
+}
+
+/* 白いカード本体 */
+.faq__body {
+  position: relative;
+  padding: 24px 48px;
+  background: var(--white);
+  border: 3px solid var(--black);
+  z-index: 1;
+}
+
+/* 紙の折れ */
+.faq__body::after {
+  content: "";
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #72b1da 0 50%, #d3ecf7 50% 80%, #eaf3f9 100% 100%);
+  border-left: 4px solid var(--black);
+  border-top: 4px solid var(--black);
+  z-index: 2;
+}
+
+.faq__question,
+.faq__answer {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 25px;
+  align-items: center;
+}
+
+.faq__question {
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #cccccc;
+}
+
+.faq__answer {
+  margin-top: 1rem;
+}
+
+.faq__icon {
+  display: block;
+  width: 40px;
+  height: auto;
+}
+
+.faq__question p {
+  color: var(--blue);
+  font-size: var(--fz26);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.faq__answer p {
+  color: var(--black);
+  font-size: var(--fz22);
+  font-weight: 500;
+  line-height: 1.7;
+}
