@@ -429,6 +429,7 @@ th {
   --fz32: clamp(1.125rem, 0.913rem + 0.91vw, 2rem);
   --fz36: clamp(1.188rem, 0.93rem + 1.1vw, 2.25rem);
   --fz40: clamp(1.125rem, 0.791rem + 1.42vw, 2.5rem);
+  --fz154: clamp(4.375rem, 3.101rem + 5.44vw, 9.625rem);
 }
 
 html {
@@ -1900,4 +1901,115 @@ li {
   .event-flow__number--03 img {
     max-width: 45px;
   }
+}
+
+/* =========================
+ Satisfaction
+========================= */
+
+.satisfaction {
+  padding: 100px 0 150px;
+  background: var(--white);
+}
+
+.satisfaction__title {
+  max-width: 400px;
+  margin: 0 auto 70px;
+}
+
+.satisfaction__box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 10px;
+  background: #ffffd7;
+}
+
+.satisfaction__check {
+  position: absolute;
+  top: -42px;
+  left: -28px;
+  width: 180px;
+  height: auto;
+}
+
+.satisfaction__rate {
+  width: 40%;
+  text-align: right;
+}
+
+.satisfaction__number {
+  color: var(--pink);
+  font-size: var(--fz154);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.satisfaction__number span {
+  font-size: 0.4em;
+  letter-spacing: 0;
+}
+
+.satisfaction__text {
+  font-size: var(--fz32);
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--black);
+  margin-top: 20px;
+}
+.satisfaction__highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.satisfaction__highlight::before {
+  content: "・・";
+  position: absolute;
+  top: -0.8em;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--pink);
+  font-weight: 900;
+}
+
+.satisfaction__highlight::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.3em;
+  width: 3em;
+  height: 0.5em;
+  transform: translateX(-50%);
+  background: url("../images/satisfaction-wave-marker.png") no-repeat center / contain;
+  z-index: 0;
+}
+
+.satisfaction__divider {
+  width: 9px;
+  height: 275px;
+  margin: 0 45px 0 60px;
+  background: var(--blue);
+}
+
+.satisfaction__content {
+  width: 50%;
+}
+
+.satisfaction__heading {
+  font-size: var(--fz32);
+  font-family: var(--font-rounded);
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--blue);
+}
+
+.satisfaction__desc {
+  color: var(--black);
+  font-size: var(--fz20);
+  font-weight: 700;
+  line-height: 1.85;
+  margin-top: 18px;
 }
