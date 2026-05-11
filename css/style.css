@@ -2295,3 +2295,41 @@ li {
     box-shadow: 8px 8px 0 #fffad7;
   }
 }
+/* =========================
+ Benefit
+========================= */
+
+.benefit {
+  padding-block: 180px;
+  background-color: #fffbdc;
+  background-image: linear-gradient(rgba(255, 213, 0, 0.55) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 213, 0, 0.55) 1px, transparent 1px);
+  background-size: 20px 20px;
+  overflow: hidden;
+}
+
+.benefit__board {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .benefit {
+    padding-block: 100px;
+    background-size: 16px 16px;
+  }
+
+  .benefit__board {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .benefit {
+    padding-block: 60px;
+    background-size: 14px 14px;
+  }
+
+  .benefit__inner {
+    padding: 0 10px;
+  }
+}
