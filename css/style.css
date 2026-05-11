@@ -2820,6 +2820,7 @@ li {
 ========================= */
 
 .footer {
+  position: relative;
   padding-block: 120px;
   background: var(--white);
   font-family: var(--font-rounded);
@@ -2855,6 +2856,30 @@ li {
   color: inherit;
 }
 
+/* ページトップ */
+
+.footer__pagetop {
+  position: absolute;
+  top: -1.5rem;
+  right: 3%;
+  width: 56px;
+  aspect-ratio: 1;
+  border: 3px solid var(--blue);
+  border-radius: 50%;
+  color: var(--blue);
+  font-size: 20px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  transition: 0.3s;
+}
+
+.footer__pagetop:hover {
+  background: var(--blue);
+
+  color: var(--white);
+}
+
 @media only screen and (max-width: 768px) {
   .footer {
     padding-block: 80px;
@@ -2867,6 +2892,11 @@ li {
   .footer__name,
   .footer__contact {
     margin-top: 40px;
+  }
+  .footer__pagetop {
+    width: 44px;
+    border-width: 2px;
+    font-size: 16px;
   }
 }
 
@@ -2882,6 +2912,11 @@ li {
   .footer__name,
   .footer__contact {
     margin-top: 32px;
+  }
+  .footer__pagetop {
+    top: -1rem;
+    width: 36px;
+    font-size: 14px;
   }
 }
 /* =========================
