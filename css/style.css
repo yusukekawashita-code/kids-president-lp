@@ -1257,7 +1257,7 @@ li {
 
 .future-story {
   position: relative;
-  background: url(../images/future-story-bg.png) 0 0 no-repeat;
+  background: url(../images/future-story-bg.webp) 0 0 no-repeat;
   -moz-background-size: cover;
   background-size: cover;
   background-position: 100%;
@@ -2010,7 +2010,7 @@ li {
   width: 3em;
   height: 0.5em;
   transform: translateX(-50%);
-  background: url("../images/satisfaction-wave-marker.png") no-repeat center / contain;
+  background: url("../images/satisfaction-wave-marker.webp") no-repeat center / contain;
   z-index: 0;
 }
 
@@ -2939,7 +2939,7 @@ li {
   display: block;
   width: 160px;
   height: 160px;
-  background: url("../images/reserve-btn.png") no-repeat center;
+  background: url("../images/reserve-btn.webp") no-repeat center;
   background-size: contain;
 }
 
