@@ -1909,6 +1909,7 @@ li {
   .event-flow-step02__note {
     left: initial;
     right: 5%;
+    top: 5%;
     bottom: 0;
     width: 80px;
     height: 80px;
