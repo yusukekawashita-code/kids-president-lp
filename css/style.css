@@ -807,7 +807,6 @@ li {
     max-width: 120px;
   }
   .header__button {
-    font-size: 13px;
     padding: 4px 8px;
   }
   .header__drawer-nav {
@@ -2470,7 +2469,7 @@ li {
   margin-top: 10px;
 }
 
-.event-overview__times p {
+.event-overview__times a {
   position: relative;
   border: 3px solid var(--blue);
   background: var(--white);
@@ -2480,9 +2479,16 @@ li {
   line-height: 1.2;
   text-align: center;
   padding-bottom: 8px;
+  transition: all ease 0.3s;
 }
 
-.event-overview__times p::after {
+.event-overview__times a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  opacity: 0.9;
+}
+
+.event-overview__times a::after {
   content: "";
   position: absolute;
   right: 5%;
@@ -2559,7 +2565,7 @@ li {
     margin-top: 8px;
   }
 
-  .event-overview__times p::after {
+  .event-overview__times a::after {
     border-left-width: 10px;
     border-top-width: 8px;
     border-bottom-width: 8px;
@@ -2608,7 +2614,7 @@ li {
     gap: 6px;
   }
 
-  .event-overview__times p {
+  .event-overview__times a {
     border-width: 2px;
     padding-bottom: 6px;
   }
@@ -2618,9 +2624,9 @@ li {
     margin-bottom: 6px;
   }
 
-  .event-overview__times p::after {
-    right: 4%;
-    bottom: 8px;
+  .event-overview__times a::after {
+    right: 10%;
+    bottom: 9px;
     border-left-width: 8px;
     border-top-width: 6px;
     border-bottom-width: 6px;
