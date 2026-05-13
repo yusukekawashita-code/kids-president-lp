@@ -871,6 +871,9 @@ li {
   width: 100%;
   height: auto;
 }
+.produce-section__gallery {
+  margin-top: 40px;
+}
 
 .produce-section__concept {
   max-width: 950px;
@@ -894,7 +897,9 @@ li {
   .produce-section__achievement {
     max-width: 100%;
   }
-
+  .produce-section__gallery {
+    margin-top: 20px;
+  }
   .produce-section__concept {
     max-width: 108%;
     width: 100vw;
